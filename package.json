@@ -1,0 +1,27 @@
+{
+  "name": "btime",
+  "version": "1.0.0",
+  "description": "Teste Btime",
+  "main": "dist/index.js",
+  "dependencies": {
+    "balanced-match": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.3.2",
+    "jasmine": "^3.3.1",
+    "ts-node": "^7.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jl91/QueroSerBtime.git"
+  },
+  "author": "john lennon de melo fernandes",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jl91/QueroSerBtime/issues"
+  },
+  "homepage": "https://github.com/jl91/QueroSerBtime#readme"
+}
