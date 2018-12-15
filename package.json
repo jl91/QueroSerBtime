@@ -17,7 +17,8 @@
   },
   "scripts": {
     "test": "node_modules/.bin/jasmine-ts --config=jasmine.json",
-    "testWithCoverage": "node_modules/.bin/nyc -r lcov -e .ts -x \"*.spec.ts\" node_modules/.bin/jasmine-ts --config=jasmine.json && node_modules/.bin/nyc report"
+    "testWithCoverage": "node_modules/.bin/nyc -r lcov -e .ts -x \"*.spec.ts\" node_modules/.bin/jasmine-ts --config=jasmine.json && node_modules/.bin/nyc report",
+    "init": "node ./dist/index.js"
   },
   "repository": {
     "type": "git",

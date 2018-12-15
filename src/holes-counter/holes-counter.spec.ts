@@ -40,7 +40,6 @@ describe('HolesCounter', () => {
             }
         ].forEach((item) => {
             const actual = holesCounter.setText(item.actual).getQuantityOfHoles();
-            console.log(actual)
             expect(actual).toEqual(item.expected);
         });
     });
