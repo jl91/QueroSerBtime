@@ -1,6 +1,6 @@
-import { IsLetterValidator } from "./validator/is-letter.validator";
-import { OneHoleValidator } from "./validator/one-hole.validator";
-import { TwoHolesValidator } from "./validator/two-holes.validator";
+import { IsLetterValidator } from "../validator/is-letter.validator";
+import { OneHoleValidator } from "../validator/one-hole.validator";
+import { TwoHolesValidator } from "../validator/two-holes.validator";
 
 export class HolesCounter {
 

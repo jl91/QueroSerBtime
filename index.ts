@@ -1,4 +1,4 @@
-import { HolesCounter } from './src/holes-counter'
+import { HolesCounter } from './src/holes-counter/holes-counter'
 
 
 const holesCounter = new HolesCounter();
