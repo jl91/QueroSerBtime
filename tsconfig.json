@@ -79,6 +79,7 @@
     /* Enables experimental support for emitting type metadata for decorators. */
   },
   "include": [
+    "index.ts",
     "src/**/*.ts",
     "node_modules/@types"
   ],
