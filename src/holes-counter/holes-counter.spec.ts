@@ -1,10 +1,23 @@
 import { HolesCounter } from "./holes-counter";
+import { ReflectiveInjector } from "ts-di";
+import { IsLetterValidator } from "../validator/is-letter.validator";
+import { OneHoleValidator } from "../validator/one-hole.validator";
+import { TwoHolesValidator } from "../validator/two-holes.validator";
 
 describe('HolesCounter', () => {
     let holesCounter: HolesCounter;
-    beforeEach(() => {
-        holesCounter = new HolesCounter();
+
+    beforeAll(() => {
+        const injector = ReflectiveInjector.resolveAndCreate([
+            HolesCounter,
+            IsLetterValidator,
+            OneHoleValidator,
+            TwoHolesValidator
+        ]);
+
+        holesCounter = injector.get(HolesCounter);
     });
+
 
     it('should test setText', () => {
         const actual = holesCounter.setText('Lorem');
