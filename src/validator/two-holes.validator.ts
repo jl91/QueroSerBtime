@@ -1,5 +1,9 @@
+import 'reflect-metadata';
 import { ValidatorInterface } from "./validator.interface";
+import { Injectable } from "ts-di";
 
+// @ts-ignore
+@Injectable()
 export class TwoHolesValidator implements ValidatorInterface<string> {
 
     private readonly TWO_HOLES_LETTERS: Array<string> = [

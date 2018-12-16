@@ -1,16 +1,24 @@
+import 'reflect-metadata';
 import { IsLetterValidator } from "../validator/is-letter.validator";
 import { OneHoleValidator } from "../validator/one-hole.validator";
 import { TwoHolesValidator } from "../validator/two-holes.validator";
+import { Injectable } from "ts-di";
 
+
+// @ts-ignore
+@Injectable()
 export class HolesCounter {
 
-    private isLetterValidator: IsLetterValidator = new IsLetterValidator();
-    private oneHoleValidator: OneHoleValidator = new OneHoleValidator();
-    private twoHolesValidator: TwoHolesValidator = new TwoHolesValidator();
     private text: string = '';
 
-    constructor() {
-
+    /**
+     * implementando inversão de controle com dependency injection
+     */
+    constructor(
+        private isLetterValidator: IsLetterValidator,
+        private oneHoleValidator: OneHoleValidator,
+        private twoHolesValidator: TwoHolesValidator
+    ) {
     }
 
     setText(text: string): HolesCounter {
