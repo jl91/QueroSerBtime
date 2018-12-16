@@ -1,11 +1,17 @@
 import { TwoHolesValidator } from "./two-holes.validator";
+import { ReflectiveInjector } from "ts-di";
 
 describe('TwoHolesValidator', () => {
     let twoHolesValidator: TwoHolesValidator;
 
     beforeEach(() => {
-        twoHolesValidator = new TwoHolesValidator();
+        const injector = ReflectiveInjector.resolveAndCreate([
+            TwoHolesValidator
+        ]);
+
+        twoHolesValidator = injector.get(TwoHolesValidator);
     });
+
 
     it('isValid', () => {
         [

@@ -1,10 +1,15 @@
 import { IsLetterValidator } from "./is-letter.validator";
+import { ReflectiveInjector } from "ts-di";
 
 describe('IsLetterValidator', () => {
     let isLetterValidator: IsLetterValidator;
 
     beforeEach(() => {
-        isLetterValidator = new IsLetterValidator();
+        const injector = ReflectiveInjector.resolveAndCreate([
+            IsLetterValidator
+        ]);
+
+        isLetterValidator = injector.get(IsLetterValidator);
     });
 
     it('isValid', () => {

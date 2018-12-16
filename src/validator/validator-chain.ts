@@ -10,9 +10,7 @@ export class ValidatorChain implements ValidatorChainInterface<string> {
     private validators: Map<string, ValidatorInterface<string>> = new Map<string, ValidatorInterface<string>>();
 
     addValidator(validator: ValidatorInterface<string>): ValidatorChainInterface<string> {
-        // é necessário ignorar pq o compilador tem um bug para essa versão // https://github.com/Microsoft/TypeScript/issues/6373
-        // @ts-ignore
-        const className = validator.contructor.name;
+        const className = validator.constructor.name;
         if (!this.validators.has(className)) {
             this.validators.set(className, validator)
         }
@@ -32,9 +30,7 @@ export class ValidatorChain implements ValidatorChainInterface<string> {
     }
 
     removeValidator(validator: ValidatorInterface<string>): ValidatorChainInterface<string> {
-        // é necessário ignorar pq o compilador tem um bug para essa versão // https://github.com/Microsoft/TypeScript/issues/6373
-        // @ts-ignore
-        const className = validator.contructor.name;
+        const className = validator.constructor.name;
         if (!this.validators.has(className)) {
             this.validators.delete(className);
         }

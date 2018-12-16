@@ -1,10 +1,15 @@
 import { OneHoleValidator } from "./one-hole.validator";
+import { ReflectiveInjector } from "ts-di";
 
 describe('IsLetterValidator', () => {
     let oneHoleValidator: OneHoleValidator;
 
     beforeEach(() => {
-        oneHoleValidator = new OneHoleValidator();
+        const injector = ReflectiveInjector.resolveAndCreate([
+            OneHoleValidator
+        ]);
+
+        oneHoleValidator = injector.get(OneHoleValidator);
     });
 
     it('isValid', () => {
