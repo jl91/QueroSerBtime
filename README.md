@@ -4,20 +4,20 @@ execute o comando **npm install**
 
 Para rodar o projeto execute o comando:
 
-*npm run init*
+**npm run init**
 
 Para executar os testes execute o comando:
 
-*npm run test*
+**npm run test**
 
 Para executar os testes com cobertura execute o comando:
 
-*npm run testWithCoverage*
+**npm run testWithCoverage**
 `(após rodar o comando, será criada uma pasta na estrutura do projeto com o report do code coverage)`
 
 `_____________________________________________________`
 
-*Enunciado teste Btime*
+**Enunciado teste Btime**
 
 http://dojopuzzles.com/problemas/exibe/buracos-nas-letras/
 
