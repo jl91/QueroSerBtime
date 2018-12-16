@@ -13,7 +13,7 @@ Para executar os testes execute o comando:
 Para executar os testes com cobertura execute o comando:
 
 **npm run testWithCoverage**
-`(após rodar o comando, será criada uma pasta na estrutura do projeto com o report do code coverage)`
+`(após rodar o comando, será criada uma pasta na estrutura do projeto "./coverage/lcov-report/index.html" com o report do code coverage)`
 
 `_____________________________________________________`
 
